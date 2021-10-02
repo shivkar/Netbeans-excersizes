@@ -14,16 +14,15 @@ import java.util.Scanner;
  */
 public class Rockpaperscissor {
     public static void main(String[] args) {
-       
              Scanner sk = new Scanner(System.in);
              System.out.println("Welcome to game");
                while(true){System.out.println("Enter Rock,Scissors,Paper : ");
                 String round = sk.nextLine();
                 if (round.equals("quit")){break;}
-                else{int rand =(int)(Math.random()* 3);if(!round.equals("Rock") && !round.equals("Paper") && !round.equals("Scissors"))
+                else{int rand =(int)(Math.random()* 3+1);if(!round.equals("Rock") && !round.equals("Paper") && !round.equals("Scissors"))
             {System.out.println("Your round is invalid");
             String newRound = "";
-            if(rand ==0){newRound = "Rock";} else if(rand == 1){newRound = "Paper";}else{newRound = "Scissors";}
+            if(rand ==1){newRound = "Rock";} else if(rand == 2){newRound = "Paper";}else{newRound = "Scissors";}
             System.out.println( " result : " + newRound);
             if(round.equals(newRound)){System.out.println("It is a tie!");}
                     else if((round.equals("Rock")&& newRound.equals("Scissors"))||
